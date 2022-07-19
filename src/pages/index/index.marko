@@ -1,0 +1,16 @@
+import dataset from './dataset.json';
+
+<!doctype html>
+<html>
+<head>
+    <title>${dataset.page_meta.title}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content=`${dataset.page_meta.meta_keywords}`>
+    <meta name="description" content=`${dataset.page_meta.meta_description}`>
+</head>
+<body>
+    <app-header h1=dataset.page_meta.h1/>
+</body>
+</html>
+
+style {}
