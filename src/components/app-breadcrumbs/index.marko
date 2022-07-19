@@ -1,0 +1,37 @@
+style {
+  .breadcrumbs {
+    display: flex;
+    padding-left: 16px;
+    margin-bottom: 18px; 
+  }
+
+  .breadcrumbs__item:after {
+    content: '>';
+    margin: 0 12px;
+
+    color: #000;
+    font-size: 12px;
+  }
+
+  .breadcrumbs__item:last-child:after {
+    content: '';
+  }
+
+  .breadcrumbs__link {
+    color: #2F80ED;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .breadcrumbs__item:last-child .breadcrumbs__link {
+    color: #4F4F4F;
+  }
+}
+
+<ul class='breadcrumbs'>
+  <for|item| of=input.breadcrumbs>
+    <li class='breadcrumbs__item'>
+      <a class='breadcrumbs__link' href=item.href>${item.text}</a>
+    </li>
+  </for>
+</ul>

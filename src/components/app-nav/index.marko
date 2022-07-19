@@ -1,0 +1,36 @@
+style {
+  .nav {
+    padding-left: 16px;
+    margin-bottom: 13px;
+
+    background-color: #fff;  
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-list__item {
+    margin-right: 32px;
+  }
+
+  .nav-list__item:last-child {
+    margin-right: 0;
+  }
+
+  .nav-list__link{
+    color: #8D8D8D;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+}
+
+<nav class="nav">
+  <ul class='nav-list'>
+  <for|item| of=input.navItems>
+    <li class='nav-list__item'>
+      <a class="nav-list__link" href=item.href>${item.text}</a>
+    </li>
+  </for>
+  </ul>
+</nav>
