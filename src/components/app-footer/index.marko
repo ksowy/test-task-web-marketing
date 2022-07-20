@@ -1,0 +1,148 @@
+style {
+  .footer {
+    padding: 40px 0;
+    padding-left: 20px;
+    background-color: #fff;
+  }
+
+  .footer__title {
+    display: block;
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .footer-info {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .footer-contacts {
+    width: 250px;
+  }
+
+  .footer-contacts__location {
+    margin: 0 19px 16px 0;
+    display: flex;
+    align-items: flex-start;      
+
+    color: #4f4f4f;
+    font-size: 14px;
+  }
+
+  .footer-contacts__location-icon {
+    margin-right: 10px;
+  }
+
+  .footer-contacts__phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+
+    color: #4f4f4f;
+    font-size: 14px;
+  }
+
+  .footer-contacts__phone-icon {
+    margin-left: 7px;
+    margin-right: 10px;
+  }
+
+  .footer-contacts__phone-text {
+    color: #4f4f4f;
+  }
+
+  .footer-info__text {
+    max-width: 560px;
+
+    color: #4f4f4f;
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    display: flex;
+  }
+
+  .footer-socials__item {
+    margin-right: 10px;
+  }
+
+  .footer-socials__item:last-child {
+    margin-right: 0;
+  }
+
+  .privacy-policy {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .privacy-policy__text {
+    color: #2D9CDB;
+    font-size: 14px;
+  }
+
+  .privacy-policy__text--gray {
+    color: #828282;
+  }
+}
+
+<footer class='footer'>
+  <span class='footer__title'>Logo / Company Name</span>
+
+  <div class='footer-info'>
+    <div class='footer-contacts'>
+      <div class='footer-contacts__location'>
+        <img src='./images/location.svg' alt='location-icon' class='footer-contacts__location-icon'>
+
+        <span class='footer-contacts__location-text'>
+          Company Adress: Lorem ipsum dolor sit amet<br> 18600, Netherlands
+        </span>
+      </div>
+
+      <div class='footer-contacts__phone'>
+        <img src='./images/phone.svg' alt='phone-icon' class='footer-contacts__phone-icon'>
+
+        <a href='tel:389587550000' class='footer-contacts__phone-text'>+38 958 755-00-00</a>
+      </div>
+    </div>
+
+    <p class='footer-info__text'>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quos ullam atque accusantium ratione molestias soluta, provident nobis, assumenda dolorum voluptas incidunt inventore quia reiciendis quis. Quis quo molestias repellat.
+    </p>
+  </div>
+
+  <ul class='footer-socials'>
+    <li class='footer-socials__item'>
+      <a href="#" class='footer-socials__link'>
+        <img src="./images/social-icon-facebook.svg" alt="social-icon-facebook">      
+      </a>
+    </li>
+    
+    <li class='footer-socials__item'>
+      <a href="#" class='footer-socials__link'>
+        <img src="./images/social-icon-instagram.svg" alt="social-icon-instagram">      
+      </a>
+    </li>
+
+    <li class='footer-socials__item'>
+      <a href="#" class='footer-socials__link'>
+        <img src="./images/social-icon-twitter.svg" alt="social-icon-twitter">      
+      </a>
+    </li>
+
+    <li class='footer-socials__item'>
+      <a href="#" class='footer-socials__link'>
+        <img src="./images/social-icon-youtube.svg" alt="social-icon-youtube">      
+      </a>
+    </li>
+  </ul>
+</footer>
+
+<div class='privacy-policy'>
+  <span class='privacy-policy__text'>
+    <span class='privacy-policy__text privacy-policy__text--gray'>© 2019 -</span> Privacy Policy <span class='privacy-policy__text privacy-policy__text--gray'>-</span> Terms and Conditions
+  </span>
+</div>
