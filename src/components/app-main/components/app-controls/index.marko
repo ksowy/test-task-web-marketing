@@ -1,0 +1,108 @@
+style {
+  .controls {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pagination, .pagination.is-centered {
+    margin: 0;
+  }
+
+  .pagination-previous {
+    margin: 0;
+    margin-right: 16px;
+
+    border-radius: 0;
+    background-color: #fff;
+  }
+
+  .pagination-next {
+    margin: 0;
+
+    border-color: #fff;
+    border-radius: 0;
+    background-color: #fff;
+  }
+
+  .pagination-item {
+    margin-right: 16px;
+  }
+
+  .pagination-link {
+    margin: 0;
+    padding: 5px;
+
+    border-radius: 0;
+    border-color: #fff;
+    background-color: #fff;
+  }
+
+  .pagination-link.is-current {
+    color: #000;
+
+    background-color: #56CCF2;
+    border-color: #56CCF2;
+  }
+
+  .dropdown-content {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .button {
+    max-width: 207px;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px #bdbdbd solid;
+    border-radius: 0;
+  }
+
+  .button-text {
+    color: #828282;
+    font-size: 16px;
+  }
+
+  .button-icon {
+    color: #828282;
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    max-width: 207px;
+  }
+}
+
+<div class='controls'>
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <a class="pagination-previous">&#8249;</a>
+    <ul class="pagination-list">
+      <li class='pagination-item'><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+      <li class='pagination-item'><a class="pagination-link is-current" aria-label="Goto page 2">2</a></li>
+    </ul>
+    <a class="pagination-next">&#8250;</a>
+  </nav>
+
+  <div class="dropdown is-active">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+        <span class='button-text'>Sort options</span>
+        <span class="button-icon is-small">&#709;</span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+      <div class="dropdown-content">
+        <a href="#" class="dropdown-item">
+          Low price
+        </a>
+        <a class="dropdown-item">
+          High price
+        </a>
+        <a href="#" class="dropdown-item is-active">
+          Mileage
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,7 @@ style {
 
   .filter {
     height: 600px;
-    margin-top: 52px;
+    margin-top: 58px;
     
     background-color: #fff;
   }
@@ -24,15 +24,81 @@ style {
   }
 
   .controls {
-    height: 35px;
     margin-bottom: 16px;
-
-    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
   }
 
-  .pagination {}
+  .pagination {
+    margin: 0;
+  }
 
-  .sort {}
+  .pagination.is-centered {
+    margin: 0;
+  }
+
+  .pagination-previous {
+    margin: 0;
+    margin-right: 16px;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+  .pagination-next {
+    margin: 0;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 0;
+  }
+
+  .pagination-item {
+    margin-right: 16px;
+  }
+
+  .pagination-link {
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 0;
+  }
+
+  .pagination-link.is-current {
+    background-color: #56CCF2;
+    border-color: #56CCF2;
+    color: #000;
+  }
+
+  .dropdown {
+
+  }
+
+  .dropdown-content {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .button {
+    width: 207px;
+    border-radius: 0;
+    border: 1px #bdbdbd solid;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-text {
+    color: #828282;
+    font-size: 16px;
+  }
+
+  .button-icon {
+    color: #828282;
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    width: 207px;
+  }
 
   .products-list {}
 
@@ -101,7 +167,7 @@ style {
   }
 
   .product-info__characteristic {
-    padding: 5px;
+    padding: 3px 5px;
     margin-right: 16px;
 
     font-size: 12px;
@@ -128,17 +194,13 @@ style {
   <div class='products'>
     <h1 class='products__title'>${input.headingText}</h1>
 
-    <div class='controls'>
-      <div class='pagination'></div>
-
-      <div class='sort'></div>
-    </div>
+    <app-controls/>
 
     <ul class='products-list'>
       <for|item| of=input.productInfo>
         <li class='products-list__item'>
           <a href=item.href class="products-list__link">
-            <img src=`./images/1.jpg` alt="product-image" class='products-list__image'>
+            <img src='./images/1.jpg' alt="product-image" class='products-list__image'>
 
             <div class='product-info'>
               <div class='product-info__wrapper'>
@@ -152,6 +214,7 @@ style {
                 <li class='product-info__characteristic'>${item.year}</li>
                 <li class='product-info__characteristic'>${item.axle_configuration}</li>
                 <li class='product-info__characteristic'>${item.mileage} ${item.mileage_measure}</li>
+                <li class='product-info__characteristic'>${item.power} ${item.power_measure}</li>
               </ul>
             </div>
 
@@ -164,11 +227,7 @@ style {
       </for>
     </ul>
 
-    <div class='controls'>
-      <div class='pagination'></div>
-
-      <div class='sort'></div>
-    </div>
+    <app-controls/>
 
     <aside class='products-info'>
       <for|item| of=input.informationText>
