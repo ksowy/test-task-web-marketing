@@ -1,0 +1,175 @@
+style {
+  .filters {
+    padding: 16px;
+
+    background-color: #fff;
+  }
+
+  .filters__title {
+    margin-bottom: 15px;
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #BDBDBD;
+
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .filter {
+    margin-bottom: 18px;
+  }
+
+  .filter__title {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+  }
+
+  .filter__title-text {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .filter-values__item {
+    margin-bottom: 5px;
+  }
+
+  .filter-values__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .filter-values__input[type="radio"],
+  .filter-values__input[type="checkbox"] {
+    margin-right: 9px;
+  }
+
+  .filter-values--minmax {
+    display: flex;
+    gap: 13px;
+  }
+
+  .button.button--filter {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    border-color: #56CCF2;
+    background-color: #56CCF2;
+
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+<div class='filters'>
+  <h3 class='filters__title'>26 Results Found</h3>
+  
+  <div class='filter'>
+    <div class='filter__title'>
+      <span class="filter__title-text">
+        Param 1
+      </span>
+
+      <img src="./images/arrow-down-icon.svg" alt="arrow-down-icon">
+    </div>
+
+    <ul class='filter-values'>
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="checkbox" class="filter-values__input" checked>value 1
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="checkbox" class="filter-values__input">value 2
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="checkbox" class="filter-values__input" checked>value 3
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="checkbox" class="filter-values__input">value 4
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="checkbox" class="filter-values__input" checked>value 5
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='filter'>
+    <div class='filter__title'>
+      <span class="filter__title-text">
+        Param 2
+      </span>
+
+      <img src="./images/arrow-down-icon.svg" alt="arrow-down-icon">
+    </div>
+
+    <ul class='filter-values'>
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="radio" class="filter-values__input" checked>value 2_1
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="radio" class="filter-values__input">value 2_2
+        </label>
+      </li>
+
+      <li class='filter-values__item'>
+        <label class="filter-values__label">
+          <input type="radio" class="filter-values__input">value 2_3
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='filter'>
+    <div class='filter__title'>
+      <span class="filter__title-text">
+        Param 3
+      </span>
+
+      <img src="./images/arrow-down-icon.svg" alt="arrow-down-icon">
+    </div>
+
+    <div class='filter-values filter-values--minmax'>
+      <input type="number" placeholder="min" class="input filter-values__input">
+      <input type="number" placeholder="max" class="input filter-values__input">
+    </div>
+  </div>
+
+  <div class='filter'>
+    <div class='filter__title'>
+      <span class="filter__title-text">
+        Param 4
+      </span>
+
+      <img src="./images/arrow-down-icon.svg" alt="arrow-down-icon">
+    </div>
+
+    <div class='filter-values'>
+      <input type="text" placeholder="Keyword" class="input filter-values__input">
+    </div>
+  </div>
+
+  <button class="button button--filter is-normal">Search</button>
+</div>

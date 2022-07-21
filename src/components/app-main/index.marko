@@ -6,14 +6,9 @@ style {
     margin-bottom: 24px;
   }
 
-  .filter {
-    height: 600px;
+  .filter__wrapper {
     margin-top: 58px;
-    
-    background-color: #fff;
   }
-
-  .products {}
 
   .products__title {
     margin-bottom: 25px;
@@ -69,10 +64,6 @@ style {
     color: #000;
   }
 
-  .dropdown {
-
-  }
-
   .dropdown-content {
     border-radius: 0;
     padding: 0;
@@ -100,8 +91,6 @@ style {
     width: 207px;
   }
 
-  .products-list {}
-
   .products-list__item {
     margin-bottom: 16px;
     
@@ -116,6 +105,7 @@ style {
   .products-list__image {
     width: 224px;
     margin-right: 16px;
+    align-self: flex-start;
   }
 
   .product-info {
@@ -138,6 +128,8 @@ style {
   }
 
   .product-info__text {    
+    margin-bottom: 18px;
+
     color: #828282;
     font-size: 14px;
     font-weight: 300;
@@ -189,7 +181,9 @@ style {
 }
 
 <main class='main'>
-  <div class='filter'></div>
+  <div class='filter__wrapper'>
+    <app-filter />
+  </div>
 
   <div class='products'>
     <h1 class='products__title'>${input.headingText}</h1>
@@ -200,6 +194,8 @@ style {
       <for|item| of=input.productInfo>
         <li class='products-list__item'>
           <a href=item.href class="products-list__link">
+
+            <!-- Я пробовал использовать данные из JSON в таком виде "src=`./images/${item.image}`", но Marko.js не находит картинку. Как это можно сделать по-другому? Поэтому я просто поставил одну статическую картинку для всех продуктов. -->
             <img src='./images/1.jpg' alt="product-image" class='products-list__image'>
 
             <div class='product-info'>
