@@ -1,0 +1,179 @@
+style {
+  .main {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    column-gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .filter {
+    height: 600px;
+    margin-top: 52px;
+    
+    background-color: #fff;
+  }
+
+  .products {}
+
+  .products__title {
+    margin-bottom: 25px;
+
+    color: #333;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .controls {
+    height: 35px;
+    margin-bottom: 16px;
+
+    background-color: #fff;
+  }
+
+  .pagination {}
+
+  .sort {}
+
+  .products-list {}
+
+  .products-list__item {
+    margin-bottom: 16px;
+    
+    background-color: #fff;
+  }
+
+  .products-list__link {
+    display: flex;
+    padding: 16px;
+  }
+
+  .products-list__image {
+    width: 224px;
+    margin-right: 16px;
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-info__wrapper {
+    max-width: 400px;
+  }
+
+  .product-info__title {
+    margin-bottom: 7px;
+    display: block;
+
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .product-info__text {    
+    color: #828282;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .product-price {
+    margin-left: auto;
+  }
+
+  .product-price__currency {
+    margin-right: 3px;
+
+    color: #4f4f4f;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .product-price__value {
+    color: #4f4f4f;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .product-info__list {
+    display: flex;
+    color: #fff;
+  }
+
+  .product-info__characteristic {
+    padding: 5px;
+    margin-right: 16px;
+
+    font-size: 12px;
+    font-weight: 300;
+
+    background-color: #c4c4c4;
+  }  
+
+  .products-info {
+    max-width: 565px;
+  }
+
+  .products-info__text {
+    margin-bottom: 16px;
+
+    color: #4f4f4f;
+    font-size: 16px;
+  }
+}
+
+<main class='main'>
+  <div class='filter'></div>
+
+  <div class='products'>
+    <h1 class='products__title'>${input.headingText}</h1>
+
+    <div class='controls'>
+      <div class='pagination'></div>
+
+      <div class='sort'></div>
+    </div>
+
+    <ul class='products-list'>
+      <for|item| of=input.productInfo>
+        <li class='products-list__item'>
+          <a href=item.href class="products-list__link">
+            <img src=`./images/1.jpg` alt="product-image" class='products-list__image'>
+
+            <div class='product-info'>
+              <div class='product-info__wrapper'>
+                <h3 class='product-info__title'>${item.title}</h3>
+                <p class='product-info__text'>
+                  Item Description: Lorem ipsum dolor sit amet consectetur  adipisicing elit. Nulla quis distinctio, officia tenetur a eaque deleniti, impedit   accusamus, alias provident sint id odio neque laudantium! Saepe quisquam libero soluta  itaque?
+                </p>
+              </div>
+
+              <ul class='product-info__list'>
+                <li class='product-info__characteristic'>${item.year}</li>
+                <li class='product-info__characteristic'>${item.axle_configuration}</li>
+                <li class='product-info__characteristic'>${item.mileage} ${item.mileage_measure}</li>
+              </ul>
+            </div>
+
+            <div class='product-price'>
+              <span class='product-price__currency'>${item.price_currency}</span>
+              <span class='product-price__value'>${item.price}</span>
+            </div>
+          </a>
+        </li>
+      </for>
+    </ul>
+
+    <div class='controls'>
+      <div class='pagination'></div>
+
+      <div class='sort'></div>
+    </div>
+
+    <aside class='products-info'>
+      <for|item| of=input.informationText>
+        <p class='products-info__text'>${item.content}</p>
+      </for>
+    </aside>
+  </div>
+</main>

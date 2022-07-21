@@ -23,7 +23,7 @@ style {
       list-style: none;
     }
 
-    p, h1 {
+    p, h1, h2, h3 {
       margin: 0;
     }
 
@@ -36,7 +36,7 @@ style {
       text-decoration: none;
     }
 
-    .content {
+    .wrapper {
       width: 1140px;
       margin: 0 auto;
       padding-top: 40px;
@@ -52,12 +52,15 @@ style {
     <meta name="description" content=dataset.page_meta.meta_description>
 </head>
 <body>
-  <main class="content">
-    <app-header headingText=dataset.page_meta.h1/>
+  <div class="wrapper">
+    <app-header />
     <app-nav navItems=dataset.nav/>
     <app-breadcrumbs breadcrumbs=dataset.breadcrumbs/>
+    <app-main headingText=dataset.page_meta.h1
+    informationText=dataset.page_text
+    productInfo=dataset.stock/>
     <app-footer />
-  </main>
+  </div>
 </body>
 </html>
 
